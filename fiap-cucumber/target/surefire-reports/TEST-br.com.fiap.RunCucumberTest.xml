@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="br.com.fiap.RunCucumberTest" time="54.874" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="br.com.fiap.RunCucumberTest" time="54.835" errors="2" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_212\jre\bin"/>
@@ -66,9 +66,77 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Venda de produtos para Loja" name="Cliente quer verificar disponibilidade de um produto" time="15.649"/>
-  <testcase classname="Venda de produtos para Loja" name="Cliente quer verificar disponibilidade de um produto" time="9.942"/>
-  <testcase classname="Venda de produtos para Loja" name="Cliente quer verificar disponibilidade de um produto" time="9.79"/>
-  <testcase classname="Venda de produtos para Loja" name="Cliente quer verificar disponibilidade de um produto" time="9.638"/>
-  <testcase classname="Venda de produtos para Loja" name="Cliente quer verificar disponibilidade de um produto" time="9.855"/>
+  <testcase classname="Venda de produtos para Loja" name="Cliente quer verificar disponibilidade de um produto" time="12.703"/>
+  <testcase classname="Venda de produtos para Loja" name="Cliente quer verificar disponibilidade de um produto" time="9.584">
+    <error message="unexpected alert open: {Alert text : oláundefined}
+  (Session info: chrome=77.0.3865.120): oláundefined
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
+System info: host: &apos;RAFAEL-NOTE-DEL&apos;, ip: &apos;192.168.99.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\rafae\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58185}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 45bb4383a1f75773fb7099b90aae4ea4" type="org.openqa.selenium.UnhandledAlertException">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : oláundefined}
+  (Session info: chrome=77.0.3865.120): oláundefined
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
+System info: host: &apos;RAFAEL-NOTE-DEL&apos;, ip: &apos;192.168.99.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\rafae\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58185}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 45bb4383a1f75773fb7099b90aae4ea4
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:123)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:633)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:462)
+	at br.com.fiap.Autenticacao.logarUsuario(Stepdefs.java:41)
+	at br.com.fiap.Stepdefs.que_cliente_VISITA_a_pagina_do_site(Stepdefs.java:104)
+	at ✽.Que cliente &quot;tomsmith&quot; VISITA a pagina do site com a senha &quot;SuperSecretPassword!&quot; como &quot;Usuario autenticado&quot;(classpath:br/com/fiap/venda_para_loja.feature:9)
+</error>
+    <system-err>Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 23434
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1571880543.897][WARNING]: This version of ChromeDriver has not been tested with Chrome version 77.
+[1571880545.958][WARNING]: Timed out connecting to Chrome, retrying...
+out 23, 2019 10:29:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMAÇÕES: Detected dialect: W3C
+</system-err>
+  </testcase>
+  <testcase classname="Venda de produtos para Loja" name="Cliente quer verificar disponibilidade de um produto" time="9.678"/>
+  <testcase classname="Venda de produtos para Loja" name="Cliente quer verificar disponibilidade de um produto" time="11.115"/>
+  <testcase classname="Venda de produtos para Loja" name="Cliente quer verificar disponibilidade de um produto" time="11.755">
+    <error message="unexpected alert open: {Alert text : oláundefined}
+  (Session info: chrome=77.0.3865.120): oláundefined
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
+System info: host: &apos;RAFAEL-NOTE-DEL&apos;, ip: &apos;192.168.99.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\rafae\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58263}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 31adaf18a0d393cb9e1c704d4473e8bb" type="org.openqa.selenium.UnhandledAlertException">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : oláundefined}
+  (Session info: chrome=77.0.3865.120): oláundefined
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
+System info: host: &apos;RAFAEL-NOTE-DEL&apos;, ip: &apos;192.168.99.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\rafae\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58263}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 31adaf18a0d393cb9e1c704d4473e8bb
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:123)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:633)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:462)
+	at br.com.fiap.Autenticacao.logarUsuario(Stepdefs.java:41)
+	at br.com.fiap.Stepdefs.que_cliente_VISITA_a_pagina_do_site(Stepdefs.java:104)
+	at ✽.Que cliente &quot;tomsmith&quot; VISITA a pagina do site com a senha &quot;SuperSecretPassword!&quot; como &quot;Usuario autenticado&quot;(classpath:br/com/fiap/venda_para_loja.feature:9)
+</error>
+    <system-err>Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 38087
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1571880574.182][WARNING]: This version of ChromeDriver has not been tested with Chrome version 77.
+[1571880576.205][WARNING]: Timed out connecting to Chrome, retrying...
+out 23, 2019 10:29:38 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMAÇÕES: Detected dialect: W3C
+</system-err>
+  </testcase>
 </testsuite>

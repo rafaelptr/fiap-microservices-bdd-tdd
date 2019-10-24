@@ -1,4 +1,44 @@
 -------------------------------------------------------------------------------
 Test set: br.com.fiap.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.011 sec
+Tests run: 5, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 60.699 sec <<< FAILURE!
+Cliente quer verificar disponibilidade de um produto(Venda de produtos para Loja)  Time elapsed: 9.584 sec  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : oláundefined}
+  (Session info: chrome=77.0.3865.120): oláundefined
+Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
+System info: host: 'RAFAEL-NOTE-DEL', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_212'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\rafae\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58185}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 45bb4383a1f75773fb7099b90aae4ea4
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:123)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:633)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:462)
+	at br.com.fiap.Autenticacao.logarUsuario(Stepdefs.java:41)
+	at br.com.fiap.Stepdefs.que_cliente_VISITA_a_pagina_do_site(Stepdefs.java:104)
+	at ?.Que cliente "tomsmith" VISITA a pagina do site com a senha "SuperSecretPassword!" como "Usuario autenticado"(classpath:br/com/fiap/venda_para_loja.feature:9)
+
+Cliente quer verificar disponibilidade de um produto(Venda de produtos para Loja)  Time elapsed: 11.755 sec  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : oláundefined}
+  (Session info: chrome=77.0.3865.120): oláundefined
+Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
+System info: host: 'RAFAEL-NOTE-DEL', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_212'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\rafae\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58263}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 31adaf18a0d393cb9e1c704d4473e8bb
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:123)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:633)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:462)
+	at br.com.fiap.Autenticacao.logarUsuario(Stepdefs.java:41)
+	at br.com.fiap.Stepdefs.que_cliente_VISITA_a_pagina_do_site(Stepdefs.java:104)
+	at ?.Que cliente "tomsmith" VISITA a pagina do site com a senha "SuperSecretPassword!" como "Usuario autenticado"(classpath:br/com/fiap/venda_para_loja.feature:9)
+

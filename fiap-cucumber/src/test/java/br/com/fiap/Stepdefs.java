@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -30,6 +31,8 @@ class Autenticacao {
         driver.findElement(By.id("password")).sendKeys(pass);
         driver.findElement(By.cssSelector("i.fa-sign-in")).click();
         if( driver.getCurrentUrl().equalsIgnoreCase("http://the-internet.herokuapp.com/secure") ) {             
+            /*JavascriptExecutor executor = (JavascriptExecutor)driver;
+            executor.executeScript("confirm($('.subheader').text());");*/
             retorno = "Usuario autenticado";
         } else { 
             retorno = "Visitante";
