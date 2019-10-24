@@ -57,9 +57,18 @@ public class Stepdefs {
     
     @Quando("O cliente pesquisa por um produto {string}")
     public void o_cliente_pesquisa_por_um_produto(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        Produtos produtos = new Produtos();
+        // "Produto disponivel"
+        String disponibilidade = produtos.pesquisar(string);
+        if (disponibilidade.equals("Produto disponivel")) {
+            assertEquals(disponibilidade,"Produto disponivel");
+        }
+        // "Produto nao disponivel"
+        if (disponibilidade.equals("Produto nao disponivel")) {
+            assertEquals(disponibilidade, "Produto nao disponivel");
+        }
     }
+
     
     @Entao("Deve ser consultado o estoque do produto {string}")
     public void deve_ser_consultado_o_estoque_do_produto(String string) {
@@ -73,4 +82,5 @@ public class Stepdefs {
         throw new cucumber.api.PendingException();
     }
 
+    
 }
