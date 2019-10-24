@@ -54,7 +54,7 @@ public class Stepdefs {
         String tipoVisitante = Autenticacao.logarUsuario(usuario, senha);
         assertEquals(tipoVisitante, tipoVisita);
     }
-    
+
     @Quando("O cliente pesquisa por um produto {string}")
     public void o_cliente_pesquisa_por_um_produto(String string) {
         Produtos produtos = new Produtos();
@@ -69,12 +69,15 @@ public class Stepdefs {
         }
     }
 
-    
     @Entao("Deve ser consultado o estoque do produto {string}")
     public void deve_ser_consultado_o_estoque_do_produto(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+        Produtos produtos = new Produtos();
+        // Se o Produto for nao disponivel, cenario nao deve continuar
+        // "Produto disponivel"
+        Integer quantidade = produtos.estoque(string);
+        assertNotNull(quantidade);
     }
+
     
     @Entao("Retornar a quantidade de Produtos {string} Disponiveis em estoque de cada loja: {string}")
     public void retornar_a_quantidade_de_Produtos_Disponiveis_em_estoque_de_cada_loja(String string, String string2) {
