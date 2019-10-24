@@ -111,12 +111,13 @@ public class Stepdefs {
         assertNotNull(quantidade);
     }
 
-    
     @Entao("Retornar a quantidade de Produtos {string} Disponiveis em estoque de cada loja: {string}")
-    public void retornar_a_quantidade_de_Produtos_Disponiveis_em_estoque_de_cada_loja(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new cucumber.api.PendingException();
+    public void retornar_a_quantidade_de_Produtos_Disponiveis_em_estoque_de_cada_loja(String prod, String resultado) {
+        Lojas lojas = new Lojas();
+        String disponibilidade = lojas.pesquisar(prod);
+        assertEquals(disponibilidade, resultado);
     }
+
 
     
 }
