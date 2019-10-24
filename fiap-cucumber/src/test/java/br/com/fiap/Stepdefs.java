@@ -1,5 +1,9 @@
 package br.com.fiap;
 
+import static org.junit.Assert.assertEquals;
+
+import java.util.HashMap;
+
 // import cucumber.api.java.en.Given;
 // import cucumber.api.java.en.Then;
 // import cucumber.api.java.en.When;
@@ -7,8 +11,6 @@ package br.com.fiap;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
-
-import static org.junit.Assert.*;
 class Autenticacao {
     static String logarUsuario(String login, String pass) {
         if ( login.equals("usuario") & pass.equals("senha") ) {
@@ -20,6 +22,31 @@ class Autenticacao {
         }
     }
 }
+class Produtos {
+    private HashMap<String, Integer> inventario = new HashMap<String, Integer>();
+    public Produtos() {
+        inventario.put("Prod 1", 3);
+        inventario.put("Prod 2", 5);
+        inventario.put("Prod 3", 2);
+        inventario.put("Prod 4", 6);
+    }
+    String pesquisar (String prod) {
+        if (inventario.get(prod) != null) {
+            return "Produto disponivel";
+        } else {
+            return "Produto não disponivel";
+        }
+    }
+    Integer estoque(String prod) {
+        Integer estoque = inventario.get(prod);
+        if (estoque != null) {
+            return estoque;
+        } else {
+            return 0;
+        }
+    }
+}
+
 public class Stepdefs {
     @Dado("Que cliente {string} VISITA a pagina do site com a senha {string} como {string}")
     public void que_cliente_VISITA_a_pagina_do_site(String usuario, String senha, String tipoVisita) {
